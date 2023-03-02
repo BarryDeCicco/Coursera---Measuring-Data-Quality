@@ -15,11 +15,16 @@ library(lavaan)
 
 trst.model <- '  trstlead =~ trstplt + trstprt + trstprl '
 
+# Fit Unconstrained Model (both groups have have their own loadings):
+
 fit <- cfa(trst.model,
            data = ess.red,
            group = "int50")
 
 summary(fit)
+
+
+# Fit Constrained Model (both groups to have equal loadings):
 
 fit.loads <- cfa(trst.model,
                  data = ess.red,
