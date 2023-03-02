@@ -1,6 +1,6 @@
 # course2_week1_example1
 
-load("X:\\Brady\\RSD Education Program Grant\\Coursera Specialization\\ess_belgium.rdata")
+load("data/ess_belgium.rdata")
 
 ess_belgium$int50[ess_belgium$int_rr <= 50] <- 1 # define two subgroups (could be anything!)
 ess_belgium$int50[ess_belgium$int_rr > 50] <- 0
